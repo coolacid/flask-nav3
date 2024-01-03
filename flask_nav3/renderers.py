@@ -122,7 +122,7 @@ class BootStrapRenderer(Renderer):
         kwargs["class"] = " ".join(addclass + ["navbar", "navbar-expand-lg"])
 
         cont = tags.nav(**kwargs)
-        ul = cont.add(tags.ul(_class=" ".join(addclass + ["nav"])))
+        ul = cont.add(tags.ul(_class=" ".join(addclass + ["nav"])))  # noqa: WPS221
 
         for item in node.items:
             ul.add(tags.li(self.visit(item), _class="nav-item"))
